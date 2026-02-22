@@ -1,0 +1,33 @@
+{% extends "base.html" %}
+{% block title %}Памятники — Михаил Иванович Воротынский - историческое наследие{% endblock %}
+
+{% block content %}
+<article class="article">
+  <div class="breadcrumb"><a href="{{ url_for('about') }}">Главная</a> / Памятники</div>
+
+  <h1 class="h1">Памятники</h1>
+  <p class="lead">
+    Историческая память сохраняется не только в музеях и книгах, но и в памятниках, мемориальных досках,
+    названиях улиц и школьных проектах. Эти материалы можно использовать как наглядное дополнение к экспозиции.
+  </p>
+
+  <p class="p">
+    На экскурсии по школьному музею удобно показать, что тема живёт и сегодня:
+    существуют мемориальные объекты, художественные изображения и современные исследования.
+    Ниже размещены примеры фотографий.
+  </p>
+
+  <h2 class="h2" id="gallery">Галерея</h2>
+    <div class="gallery">
+    <figure class="imgcard">
+      <img src="{{ url_for('static', filename='images/museum/photo_01.jpg') }}" alt="Памятник «Тысячелетие России» и изображение М. И. Воротынского (стенд)" loading="lazy" />
+    </figure>
+    <figure class="imgcard">
+      <img src="{{ url_for('static', filename='images/museum/photo_03.jpg') }}" alt="Барельеф с М. И. Воротынским (репродукция на стенде)" loading="lazy" />
+    </figure>
+    <figure class="imgcard">
+      <img src="{{ url_for('static', filename='images/museum/photo_08.jpg') }}" alt="Памятник князьям Воротынским (фото со стенда)" loading="lazy" />
+    </figure>
+  </div>
+</article>
+{% endblock %}

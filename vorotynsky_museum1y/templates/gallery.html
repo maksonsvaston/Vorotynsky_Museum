@@ -1,0 +1,33 @@
+{% extends "base.html" %}
+{% block title %}Галерея изображений — Михаил Иванович Воротынский - историческое наследие{% endblock %}
+
+{% block content %}
+<article class="article">
+  <div class="breadcrumb"><a href="{{ url_for('about') }}">Главная</a> / Галерея изображений</div>
+
+  <h1 class="h1">Галерея изображений</h1>
+  <p class="lead">
+    Здесь размещены несколько примеров фотографий из школьного музея. Полный набор снимков доступен по ссылке на Google Диск.
+  </p>
+
+  <p>
+    <a href="https://drive.google.com/file/d/1HNq5SmZDa8XVbtFQTbqQb6d93b1aZ2_B/view?usp=drive_link" target="_blank" rel="noopener">Открыть / скачать все фотографии на Google Диске</a>
+    <span class="muted">(откроется в новой вкладке)</span>
+  </p>
+
+  <p class="muted">
+    Если нужно скачать напрямую одним файлом, на странице Google Диска нажмите кнопку «Скачать».
+  </p>
+
+  <div class="gallery">
+    <figure class="imgcard">
+      <img src="{{ url_for('static', filename='images/museum/photo_05.jpg') }}" alt="Экспозиция школьного музея (витрина)" loading="lazy" />
+    </figure>
+    <figure class="imgcard">
+      <img src="{{ url_for('static', filename='images/museum/photo_07.jpg') }}" alt="Подборка книг из экспозиции музея" loading="lazy" />
+    </figure>
+  </div>
+
+  <p class="p">Нажмите на любую фотографию, чтобы открыть её крупно.</p>
+</article>
+{% endblock %}
