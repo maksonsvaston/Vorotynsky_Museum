@@ -1,0 +1,35 @@
+{% extends "base.html" %}
+{% block title %}Книги о Воротынском — Михаил Иванович Воротынский - историческое наследие{% endblock %}
+
+{% block content %}
+<article class="article">
+  <div class="breadcrumb"><a href="{{ url_for('about') }}">Главная</a> / Книги о Воротынском</div>
+
+  <h1 class="h1">Книги о Воротынском</h1>
+  <p class="lead">
+    В школьном музее важны не только стенды, но и <strong>источники</strong>: учебники, справочники и книги,
+    по которым можно проверить факты и подготовить сообщение. Здесь собраны примеры материалов,
+    которые удобно использовать для проектов и экскурсий.
+  </p>
+
+  <h2 class="h2">Как использовать книги в музее</h2>
+  <ul class="sources">
+    <li>Сверять даты и имена, чтобы подписи на стендах были точными.</li>
+    <li>Подбирать короткие цитаты (1–2 предложения) для экскурсионного текста.</li>
+    <li>Искать иллюстрации и карты, которые помогут сделать рассказ наглядным.</li>
+  </ul>
+
+  <h2 class="h2" id="gallery">Примеры иллюстраций</h2>
+    <div class="gallery">
+    <figure class="imgcard">
+      <img src="{{ url_for('static', filename='images/museum/books_1.jpg') }}" alt="Книги и материалы в экспозиции школьного музея" loading="lazy" />
+    </figure>
+    <figure class="imgcard">
+      <img src="{{ url_for('static', filename='images/museum/books_2.jpg') }}" alt="Подборка книг о Воротынском (фрагмент)" loading="lazy" />
+    </figure>
+    <figure class="imgcard">
+      <img src="{{ url_for('static', filename='images/museum/books_3.jpg') }}" alt="Полка с книгами и источниками (фрагмент)" loading="lazy" />
+    </figure>
+  </div>
+</article>
+{% endblock %}
